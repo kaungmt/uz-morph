@@ -1,0 +1,25 @@
+! Simple Rules with Tags 
+
+Multichar_Symbols +V +Inf +Adj +Pl UN+ @P.UN.ON@ @D.UN@ @C.UN@
+
+LEXICON Root
+Prefix;
+
+LEXICON Prefix
+@P.UN.ON@UN+:@P.UN.ON@un Verb;
+ Verb;
+
+LEXICON Verb
+
+@C.UN@do Vinf;
+drink Vinf;
+pay Vinf;
+
+LEXICON Vinf
+
+able Adjinf;
+@D.UN@+V+Inf:@D.UN@ #;
+
+LEXICON Adjinf
++Adj:0 #;
++Adj+Pl:s #;

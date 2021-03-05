@@ -1,0 +1,29 @@
+# Vowels
+define V [a | e | i | o | u ];
+
+read lexc english.lexc
+define Lexicon;
+
+
+define EDeletion e -> 0 || _ "^" [i n g | e d];
+define KInsertion [..] -> k || V c _ "^" [e d|i n g];
+define EInsertion [..] -> e || [s|z|x|c h|s h] _ "^" s;
+define ConsonantDoubling g -> g g || V _ "^" i n g ;
+define YReplacement y -> i e || _ "^" s ,, y -> i || _ "^" e d ;
+
+define Exceptions [m a k e "+V" "+PastPart"]:[m a d e];
+
+define Cleanup "^" -> 0;
+
+regex Lexicon .o.
+	 ConsonantDoubling .o.
+	 EDeletion .o.
+	 EInsertion .o.
+	 YReplacement .o.
+	 KInsertion .o.
+	 Cleanup;
+	 
+regex [Exceptions .P. Lexicon]
+	 
+	 
+

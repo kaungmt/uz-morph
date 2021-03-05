@@ -1,0 +1,53 @@
+Multichar_Symbols +N +Sg +Pl +1SgPos +2SgPos +3SgPos +1PlPos +2PlPos +3PlPos +Nom +Abl +Loc +Acc +Dat +Gen +1SgPrd +2SgPrd +2HnPrd +3SgPrd +1PlPrd +2PlPrd +3PlPrd
+
+LEXICON Root
+Noun ;
+
+
+LEXICON Noun
+xola Ninf;
+kitob Ninf;
+
+LEXICON Ninf
+
++N+Sg:0 #;
++N+Pl:^lar #;
+
++N+Sg:0 Possessive;
++N+Pl:^lar Possessive;
+
++N+Sg:0 MainSuffix;
++N+Pl:^lar MainSuffix;
+
++N+Sg:0 Predicative;
++N+Pl:^lar PredicativePlural;
+
+LEXICON Possessive
++1SgPos:^m #;
++2SgPos:^ng #;
++3SgPos:^i #;
++1PlPos:^miz #;
++2PlPos:^ngiz #;
+
+LEXICON MainSuffix
++Nom:^0 #;
++Abl:^dan #;
++Loc:^da #;
++Acc:^ni #;
++Dat:^ga #;
++Gen:^ning #;
+
+LEXICON Predicative
+PredicativeSingular;
+PredicativePlural;
+
+LEXICON PredicativeSingular
++1SgPrd:^man #;
++2SgPrd:^san #;
++2HnPrd:^siz #;
++3SgPrd:^0 #;
+
+LEXICON PredicativePlural
++1PlPrd:^miz #;
++2PlPrd:^sizlar #;
++3PlPrd:^lar #;
