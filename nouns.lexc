@@ -1,8 +1,30 @@
-Multichar_Symbols +N +Sg +Pl +1SgPos +2SgPos +3SgPos +1PlPos +2PlPos +3PlPos +Nom +Abl +Loc +Acc +Dat +Gen +1SgPrd +2SgPrd +2HnPrd +3SgPrd +1PlPrd +2PlPrd +3PlPrd
+Multichar_Symbols +N +Sg +Pl 
++1SgPos +2SgPos +3SgPos 
++1PlPos +2PlPos +3PlPos 
++Nom +Abl +Loc +Acc +Dat +Gen 
++1SgPrd +2SgPrd +2HnPrd +3SgPrd 
++1PlPrd +2PlPrd +3PlPrd
++AsmDbt +AsmGs1 +AsmGs2
++Qst +QstCmp +QstAfr
++AsmQst +AsmQstSrp +AsmQstDbt
++Srp
++Neg +Abs
++Ehn +Eaf
++Dmn1 +Dmn2 +Dmn3 +Dmn4 +Dmn5 +Dmn6
++Drg1 +Drg2 +Drg3 +Drg4
++Sep
++Prn
++Adz
++Bnd
++Blg
++Cmp1
++Cmp2
++Cmp3
++Act1
++Act2
 
 LEXICON Root
 Noun ;
-
 
 LEXICON Noun
 xola Ninf;
@@ -14,13 +36,34 @@ LEXICON Ninf
 +N+Pl:^lar #;
 
 +N+Sg:0 Possessive;
-+N+Pl:^lar Possessive;
-
-+N+Sg:0 MainSuffix;
-+N+Pl:^lar MainSuffix;
-
++N+Sg:0 Inflectional;
 +N+Sg:0 Predicative;
-+N+Pl:^lar PredicativePlural;
++N+Sg:0 Assumption;
++N+Sg:0 Question;
++N+Sg:0 AssumptionQuestion;
++N+Sg:0 Surprise;
++N+Sg:0 Negative;
++N+Sg:0 Absence;
++N+Sg:0 EnhancedHonorific;
++N+Sg:0 EnhancedAffirmative;
++N+Sg:0 Diminutive;
++N+Sg:0 Derogative;
++N+Sg:0 Separative;
++N+Sg:0 Pronominalazing;
++N+Sg:0 Adjectivizing;
++N+Sg:0 Boundary;
++N+Sg:0 Belong;
++N+Sg:0 Comparative;
++N+Sg:0 Accentuative;
+
+! +N+Sg:0 Possessive;
+! +N+Pl:^lar Possessive;
+
+! +N+Sg:0 MainSuffix;
+! +N+Pl:^lar MainSuffix;
+
+! +N+Sg:0 Predicative;
+! +N+Pl:^lar PredicativePlural;
 
 LEXICON Possessive
 +1SgPos:^m #;
@@ -29,7 +72,7 @@ LEXICON Possessive
 +1PlPos:^miz #;
 +2PlPos:^ngiz #;
 
-LEXICON MainSuffix
+LEXICON Inflectional
 +Nom:^0 #;
 +Abl:^dan #;
 +Loc:^da #;
@@ -51,3 +94,72 @@ LEXICON PredicativePlural
 +1PlPrd:^miz #;
 +2PlPrd:^sizlar #;
 +3PlPrd:^lar #;
+
+! Gumon
+LEXICON Assumption
++AsmDbt:^mish #; ! Doubting
++AsmGs1:^dir #; ! Apparent Guess
++AsmGs2:^ov #; ! Doubt and Assumption
+
+LEXICON Question
++Qst:^mi #; ! Question
++QstCmp:^-chi #; ! Comparing Question
++QstAfr:^-a #; ! Tag Question
+
+LEXICON AssumptionQuestion
++AsmQst:^mi #;
++AsmQstSrp:^-ya #;
++AsmQstDbt:^mikan #; ! Doubt Question
+
+LEXICON Surprise
++Srp:^chi #;
+
+LEXICON Negative
++Neg:^mas #; ! Denotes the negation
+
+LEXICON Absence
++Abs:^siz #; ! Denotes the absence
+
+LEXICON EnhancedHonorific
++Ehn:^lar #;
+
+LEXICON EnhancedAffirmative
++Eaf:^dir #; 
+
+LEXICON Diminutive
++Dmn1:^jon #;
++Dmn2:^xon #;
++Dmn3:^cha #;
++Dmn4:^kay #;
++Dmn5:^chak #;
++Dmn6:^gina #;
+
+LEXICON Derogative
++Drg1:^cha #;
++Drg2:^kay #;
++Drg3:^gina #;
++Drg4:^cha #;
+
+LEXICON Separative
++Sep:^gina #;
+
+LEXICON Pronominalazing
++Prn:^niki #;
+
+LEXICON Adjectivizing
++Adz:^dagi #;
+
+LEXICON Boundary
++Bnd:^gacha #;
+
+LEXICON Belong
++Blg:^ligi #;
+
+LEXICON Comparative
++Cmp1:^cha #;
++Cmp2:^chalik #;
++Cmp3:^dek #;
+
+LEXICON Accentuative
++Act1:^-ku #;
++Act2:^-da #;
