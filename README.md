@@ -1,5 +1,5 @@
 # Uzbek Morphological Parser
-Uzbek Morphological Parsing using FST Toolkit foma.
+Uzbek Morphological Parsing using FST Toolkit `foma`.
 
 # Structure
 For now I set temprorary names:
