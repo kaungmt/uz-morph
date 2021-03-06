@@ -1,0 +1,24 @@
+Multichar_Symbols +Verb +PresInd +Act +1P +2P +3P +Sg +Pl
+
+LEXICON Root
+cant    AreV ;
+laud    AreV ;
+am      AreV;
+
+LEXICON AreV
+o+Verb:0 AreConj ;
+
+LEXICON AreConj
+ArePresIndicAct ;
+
+LEXICON ArePresIndicAct
++PresInd+Act:0 ArePresIndicEnd ;
+
+LEXICON ArePresIndicEnd
++1P+Sg:0    # ;
++2P+Sg:as   # ;
++3P+Sg:at   # ;
+
++1P+Pl:amus # ;
++2P+Pl:atis # ;
++3P+Pl:ant  # ;

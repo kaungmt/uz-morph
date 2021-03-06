@@ -1,0 +1,11 @@
+LEXICON Root
+        MEGA ;
+
+LEXICON MEGA
+mega    MEGA ; 
+        Nouns ;
+
+LEXICON Nouns
+warj    #   ;
+kanjum  #   ;
+slarp   #   ;

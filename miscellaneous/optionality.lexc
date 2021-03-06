@@ -1,0 +1,19 @@
+LEXICON Root
+kant    V ;
+dir     V ;
+vid     V ;
+
+LEXICON V
+        AD ;
+      Vend ;
+
+LEXICON AD
+ad    Vend ;
+
+LEXICON Vend
+i       # ;
+as      # ;
+is      # ;
+os      # ;
+us      # ;
+u       # ;
