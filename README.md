@@ -74,5 +74,15 @@ i       # ;
 LEXICON NomAcc
 u       # ;
 a       # ;
+```
 
 Here it's much cleaner and coherent. 
+
+### How to Choose a Tag Name
+
+As I'm not a linguist, I have some difficulties with _naming_ Uzbek morphemes. Some of them have Turkish counterparts, some of them don't. So, the book provides several noteworthy guidelenes:
+
+1. Prime Directive - use tags that are appropriate given the differences of your language. Don't try to copy from other linguistically distant language.
+2. Secondary Directive - same morphemes mean same tags; however, if they act differently, then name them accordingly.
+3. Tertiary Directive - use tags from related languages, unless it violates the first and the second principles.
+
