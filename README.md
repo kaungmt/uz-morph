@@ -39,8 +39,40 @@ ge      NounRoots ;
 This will make the morpheme (in this case suffix -ge-) optional.
 
 ### Umbrella Lexicon
-```LEXICON Nouns
+```
+LEXICON Nouns
         CommonNouns ;
         SingularNouns ;
         PluralNouns ;
 ```
+
+### DRY
+Suppose you want some affix be available for certain nouns, while disallow it for others. Instead of duplicating the code, like this:
+```
+LEXICON Nouns
+kirit   CaseEnd ;
+faarum  CaseEnd ;
+wadil   CaseEnd ;
+wup     NomAcc ; ! This is our exception
+
+LEXICON CaseEnd
+u       # ;
+a       # ;
+i       # ;
+
+LEXICON NomAcc
+u       # ;
+a       # ;
+```
+which seems inefficient and leads to troubles in refactoring. Instead try this:
+
+```
+LEXICON CaseEnd
+        NomAcc ;
+i       # ;
+
+LEXICON NomAcc
+u       # ;
+a       # ;
+
+Here it's much cleaner and coherent. 
