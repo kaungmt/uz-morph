@@ -10,3 +10,8 @@ For now I set temprorary names:
 ## Suffixes
 
 https://github.com/Mukhammadsaid19/uz-morph/wiki/Noun-Suffixes-Declaration
+
+
+## Vocabulary
+
+I have parsed only Uzbek entries from uz.wiktionary.org dump file through regexes. I will try to categorize the data by nouns, adjectives, verbs, pronouns, conjunctions, etc.
