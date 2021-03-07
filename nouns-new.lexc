@@ -4,53 +4,97 @@ Multichar_Symbols   +N +Sg +Pl                      ! Number (Singular or Plural
                     +Nom +Abl +Loc +Acc +Dat +Gen   ! Case Endings (^0, ^dan, ^da, ^ni, ^ga, ^ning)
                     +1SgPrd +2SgPrd +2HnPrd +3SgPrd ! Predicative (^man, ^san, ^siz, ^0)
                     +1PlPrd +2PlPrd +3PlPrd         ! Predicative (^miz, ^sizlar, ^lar)
+                    +Dbt1 +Dbt2 +Dbt3               ! Doubt (^mish, ^chi, ^a(ya))
+                    +Qst +QstCmp +QstAfr            ! Question (^mi, chi, ^a(ya)) 
+                    +DbtQst +DbtQstSrp +DbtQstDbt   ! Doubt-Question (^mi, ^a(ya), mikan)
+                    @U.GEN.ON@ @U.GEN.OFF@
 
+! STRUCTURE: 
+! Root + Number (1)
+! Root + Number + Possession (6)
+! Root + Number + Case (6)
+! Root + Number + Possession + Case (36)
+! Root + Number + Doubt (3)
+! Root + Number + Possession + Doubt (18) 
+! Root + Number + Case + Doubt (18)
+! Root + Number + Possession + Case + Doubt (108)
+! 
+! TOTAL: 196, with eliminations of Genitive Affix: 182
+! 
+! EXCEPTIONS:
+! +Gen:ning when used with derivational suffixes, morphs into -niki. 
 
 LEXICON Root
                 Noun;
 
 LEXICON Noun
-padar           Ninf;
+olim            NBeg;
 
-LEXICON Ninf
-+N+Sg:0         Nend;
+LEXICON NBeg
++N+Sg:0         NInt1;
+! +N+Sg:lar       NInt1;
 
-LEXICON Nend
+LEXICON NInt1
                 Possession;
                 Case;
                 Predicative;
 
+! POSSESSION SUFFIXES (USUALLY COME AFTER STEM)
 LEXICON Possession
 +1SgPos:im      PossessionCont;
 +2SgPos:ing     PossessionCont;
 +3SgPos:i       PossessionCont;
 +1PlPos:imiz    PossessionCont;
 +2PlPos:ingiz   PossessionCont;
++3PlPos:lari    PossessionCont;
 
 LEXICON PossessionCont
-                #;
+                NInt2;
                 Case;
-                Predicative;
+                PredicativeEnd;
 
+! CASE ENDINGS (USUALLY COME AFTER POSESSION OR NUMBER AFFIX)
 LEXICON Case
-+Nom:0          #;
-+Abl:dan        #;
-+Loc:da         #;
-+Acc:ni         #;
-+Dat:ga         #;
-+Gen:ning       #;
++Nom:0          NInt2;
++Abl:dan        NInt2;
++Loc:da         NInt2;
++Acc:ni         NInt2;
++Dat:ga         NInt2;
+@U.GEN.OFF@+Gen:@U.GEN.OFF@ning       NInt2; ! ELIMINATED "-NINGMISH" SINCE IT IS TURNED INTO "-NIKIMISH".
+                NInt2;
 
+
+! DERIVATIONAL SUFFIXES (USUALLY COME AFTER POSSESSION, CASE OR NUMBER AFFIXES)
+LEXICON NInt2
+                @U.GEN.ON@ Derivational ;
+                # ;
+
+LEXICON Derivational
+                Doubt ;
+
+LEXICON Doubt
++Dbt1:mish      # ;
++Dbt2:dir       # ;
++Dbt3:ov        # ;
+
+
+
+
+! PREDICATIVE SUFFIXES (USUALLY COME AT THE END)
 LEXICON Predicative
                 PredicativeSingular ;
                 PredicativePlural ;
 
 LEXICON PredicativeSingular
-+1SgPrd:man     #;
-+2SgPrd:san     #;
-+2HnPrd:siz     #;
-+3SgPrd:0       #;
++1SgPrd:man     PredEnd;
++2SgPrd:san     PredEnd;
++2HnPrd:siz     PredEnd;
++3SgPrd:0       PredEnd;
 
 LEXICON PredicativePlural
-+1PlPrd:miz     #;
-+2PlPrd:sizlar  #;
-+3PlPrd:lar     #;
++1PlPrd:miz     PredEnd;
++2PlPrd:sizlar  PredEnd;
++3PlPrd:lar     PredEnd;
+
+LEXICON PredEnd
+                # ;
