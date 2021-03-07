@@ -86,3 +86,37 @@ As I'm not a linguist, I have some difficulties with _naming_ Uzbek morphemes. S
 2. Secondary Directive - same morphemes mean same tags; however, if they act differently, then name them accordingly.
 3. Tertiary Directive - use tags from related languages, unless it violates the first and the second principles.
 
+## Dependencies and Flag Diacritics
+
+Uzbek Morphology is full of dependencies. Some affixes cannot be used after another one, or two affixes cannot co-occur in the same word. For this reason, Flag Diacritics were introduced. Take a look at Arabic. A word with the **definite** article "al-" cannot contain any **indefinite** case endings. 
+
+We introduce two flags in `Multichar_Symbols`, namely `@U.ART.PRESENT@` and `@U.ART.ABSENT@` to apply switch on/off mechanism.
+
+```
+! Arabic Nouns
+! Definite article al- cannot be used with indefinite case endings. 
+! So, flag diacritics, specifically U-type (stands for Unification) should be used.
+Multichar_Symbols @U.ART.PRESENT@ @U.ART.ABSENT@
+
+
+LEXICON Root
+        Article ;
+
+LEXICON Article
+                  Stems ;
+al@U.ART.PRESENT@ Stems ;
+
+LEXICON Stems 
+kitaab Case ;
+
+LEXICON Case
+u   # ;
+a   # ;
+i   # ;
+@U.ART.ABSENT@     IndefCase ;
+
+LEXICON IndefCase
+uN  # ;
+aN  # ;
+iN  # ;
+```
