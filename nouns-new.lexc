@@ -7,6 +7,7 @@ Multichar_Symbols   +N +Sg +Pl                      ! Number (Singular or Plural
                     +Dbt1 +Dbt2 +Dbt3               ! Doubt (^mish, ^chi, ^a(ya))
                     +Qst +QstCmp +QstAfr            ! Question (^mi, chi, ^a(ya)) 
                     +DbtQst +DbtQstSrp +DbtQstDbt   ! Doubt-Question (^mi, ^a(ya), mikan)
+                    +Ast                            ! Astonishment (^-chi)
                     @U.GEN.ON@ @U.GEN.OFF@
 
 ! STRUCTURE: 
@@ -71,13 +72,22 @@ LEXICON NInt2
 
 LEXICON Derivational
                 Doubt ;
+                Astonishment ;
+
+! DOUBT AND ASTONISHMENT ARE STRUCTURALLY EQUIVALENT AFFIXES
 
 LEXICON Doubt
 +Dbt1:mish      # ;
 +Dbt2:dir       # ;
 +Dbt3:ov        # ;
 
+LEXICON Astonishment
++Ast:-chi       # ;
 
+
+! PRESUMABLY COMES AFTER POSSESSION 
+LEXICON Pronominalizing 
++Pnm:niki       # ;
 
 
 ! PREDICATIVE SUFFIXES (USUALLY COME AT THE END)
