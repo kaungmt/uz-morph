@@ -27,7 +27,7 @@ LEXICON Root
                 Noun;
 
 LEXICON Noun
-maslahat        NBeg;
+saidxon        NBeg;
 
 LEXICON NBeg
 +N+Sg:0         NInt1;
