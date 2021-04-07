@@ -1,14 +1,12 @@
-define V [a | e | i | o | u ];
+define V [a | e | i | o | u | o' | ya | yo' | ye];
 define C [b | t | d | r];
 
 read lexc nouns.lexc
 define Lexicon;
 
-define IInsertion [..] -> i || C _ "^" [m|n g];
-define SInsertion [..] -> s || V _ "^" i;
-define LarDeletion l a r -> 0 || _ "^" [l a r];
-
+define IDeletion i -> 0 || V "^" _ [m|n g];
+define SInsertion [..] -> s || V _ "^" i .#.;
 
 define Cleanup "^" -> 0;
 
-regex Lexicon .o. LarDeletion .o. SInsertion .o. IInsertion .o. Cleanup;
+regex Lexicon .o. SInsertion .o. IDeletion .o. Cleanup;

@@ -11,11 +11,12 @@ Multichar_Symbols   +N +Sg +Pl                      ! Number (Singular or Plural
                     +Neg                            ! Negative
                     +Abs                            ! Absence
                     +Hnf       
-                    +Aff        
+                    +Afr        
                     +Dim                             !
                     +Drg
                     +Sep
-                    +Adc
+                    +Adz
+                    +Prm
                     +Bor
                     +Aff
                     +Cmp
@@ -27,7 +28,7 @@ LEXICON Root
                 Noun;
 
 LEXICON Noun
-saidxon        NBeg;
+kitob        NBeg;
 
 LEXICON NBeg
 +N+Sg:0         NInt1;
@@ -87,7 +88,7 @@ LEXICON NInt3Group
                 Honorific ;
 
 LEXICON Pronominalizing
-+Prn:niki      NInt4;
++Prm:niki      NInt4;
 
 LEXICON Predicate
 +1SgPrd:man     NInt6; 
@@ -97,6 +98,7 @@ LEXICON Predicate
 
 LEXICON Honorific 
 +Hnf:lar        #;
+
 
 
 
@@ -128,6 +130,7 @@ LEXICON Adjectivizing
 
 LEXICON Bordering 
 +Bor:gacha      NInt7;
+
 
 
 
@@ -185,7 +188,7 @@ LEXICON DoubtQuestion
 +DbtQst1:mikan  NInt13 ;
 
 LEXICON Affirmative
-+Aff:kan        # ;
++Afr:kan        # ;
 
 LEXICON Reassuring 
 +Res:-ku        # ;
@@ -279,113 +282,3 @@ LEXICON NInt15Group
                 ! Adjectivizing ;
                 ! Affiliating ;
                 ! NInt6 ;
-
-
-
-
-
-
-
-
-! ! POSSESSION SUFFIXES (USUALLY COME AFTER STEM)
-
-! LEXICON PossessionCont
-!                 Possession ;
-
-! LEXICON PredicateCont 
-!                 Predicative ;
-
-! LEXICON Predicative
-!                 PredicativeSingular ;
-!                 PredicativePlural ;
-
-
-
-
-! LEXICON PredicativeSingular
-! +1SgPrd:man     PredEnd;
-! +2SgPrd:san     PredEnd;
-! +2HnPrd:siz     PredEnd;
-! +3SgPrd:0       PredEnd;
-
-! LEXICON PredicativePlural
-! +1PlPrd:miz     PredEnd;
-! +2PlPrd:sizlar  PredEnd;
-! +3PlPrd:lar     PredEnd;
-
-
-
-! LEXICON Possession
-! +1SgPos:im      NInt3;
-! +2SgPos:ing     NInt3;
-! +3SgPos:i       NInt3;
-! +1PlPos:imiz    NInt3;
-! +2PlPos:ingiz   NInt3;
-! +3PlPos:lari    NInt3;
-!                 NInt3;
-!                 Nend;
-
-! LEXICON NInt3
-!                 DoubtCont;
-
-
-! LEXICON DoubtCont
-!                 Doubt;
-!                 Question;
-!                 DoubtQuestion;
-
-
-! ! CASE ENDINGS (USUALLY COME AFTER Possession OR NUMBER AFFIX)
-! LEXICON Case
-! +Nom:0          NInt2;
-! +Abl:dan        NInt2;
-! +Loc:da         NInt2;
-! +Acc:ni         NInt2;
-! +Dat:ga         NInt2;
-! @U.GEN.OFF@+Gen:@U.GEN.OFF@ning       NInt2; ! ELIMINATED "-NINGMISH" SINCE IT IS TURNED INTO "-NIKIMISH".
-!                 NInt2;
-
-
-! ! DERIVATIONAL SUFFIXES (USUALLY COME AFTER POSSESSION, CASE OR NUMBER AFFIXES)
-! LEXICON NInt2
-!                 @U.GEN.ON@ Derivational ;
-!                 # ;
-
-! LEXICON Derivational
-!                 Doubt ;
-!                 Astonishment ;
-
-! ! DOUBT AND ASTONISHMENT ARE STRUCTURALLY EQUIVALENT AFFIXES
-
-! LEXICON Doubt
-! +Dbt1:mish      # ;
-! +Dbt2:dir       # ;
-! +Dbt3:ov        # ;
-
-! LEXICON Astonishment
-! +Ast:-chi       # ;
-
-
-! ! PRESUMABLY COMES AFTER POSSESSION 
-! LEXICON Pronominalizing 
-! +Pnm:niki       # ;
-
-
-! ! PREDICATIVE SUFFIXES (USUALLY COME AT THE END)
-! LEXICON Predicative
-!                 PredicativeSingular ;
-!                 PredicativePlural ;
-
-! LEXICON PredicativeSingular
-! +1SgPrd:man     PredEnd;
-! +2SgPrd:san     PredEnd;
-! +2HnPrd:siz     PredEnd;
-! +3SgPrd:0       PredEnd;
-
-! LEXICON PredicativePlural
-! +1PlPrd:miz     PredEnd;
-! +2PlPrd:sizlar  PredEnd;
-! +3PlPrd:lar     PredEnd;
-
-! LEXICON PredEnd
-!                 # ;

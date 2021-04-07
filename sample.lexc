@@ -1,0 +1,57 @@
+Multichar_Symbols +SG +PL +PP1 +PP2 +PP3 +NOM +ACC +GEN +DAT +LOC +ABL +PART +PSG
+
+LEXICON Root
+kitob    NumC;
+
+LEXICON NumC
++SG:0   Poss1;
++PL:lar Poss2;
+
+LEXICON NumV
++SG:0    Poss2;
++PL:lar  Poss2;
+
+LEXICON Poss1
++PP1+PSG:m      Case;
++PP2+PSG:ng     Case;
++PP3+PSG:si     Case;
++PP1+PSG:miz    Case;
++PP2+PSG:ngiz   Case;
++PP3+PSG:i      Case;
+                Case;
+
+LEXICON Poss2
++PP1:PSG:im     Case;
++PP2+PSG:ing    Case;
++PP3+PSG:i      Case;
++PP1+PPL:imiz   Case;
++PP2+PPL:ingiz  Case;
++PP3+PPL:i      Case;
+                Case;
+
+LEXICON Case 
++NOM:0          PrePreFinal1;
++ACC:ning       Final;
++GEN:ni         PrePreFinal2;
++DAT:ga         PrePreFinal1;
++LOC:da         PrePreFinal2;
++ABL:dan        PrePreFinal1;
+
+LEXICON PrePreFinal1
++PART:mi        Final;
++PART:ku        Final;
++PART:-ya       Final;
++PART:-da       Final;
++PART:-chi      Final;
+                Final;
+
+
+LEXICON PrePreFinal2 
++PART:mi        Final;
++PART:ku        Final;
++PART:-ya       Final;
++PART:-chi      Final;
+                Final;
+
+LEXICON Final 
+                # ;
