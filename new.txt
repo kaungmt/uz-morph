@@ -14,3 +14,16 @@ xolalar
 xolalaring
 xolalarim
 xolalari
+
+kitobm
+kitobi
+kitobm
+Cost[f]: 1
+
+kitob-
+kitobm
+Cost[f]: 1
+
+kitobim
+kitob-m
+Cost[f]: 1
