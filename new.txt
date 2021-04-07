@@ -27,3 +27,21 @@ Cost[f]: 1
 kitobim
 kitob-m
 Cost[f]: 1
+
+
+kitob+N+Sg
+kitob+N+Sg+2SgPos
+kitob+N+Sg+1SgPos
+kitob+N+Sg+3SgPos
+kitob+N+Pl
+kitob+N+Pl+2SgPos
+kitob+N+Pl+1SgPos
+kitob+N+Pl+3SgPos
+xola+N+Sg
+xola+N+Sg+2SgPos
+xola+N+Sg+1SgPos
+xola+N+Sg+3SgPos
+xola+N+Pl
+xola+N+Pl+2SgPos
+xola+N+Pl+1SgPos
+xola+N+Pl+3SgPos
